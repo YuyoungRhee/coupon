@@ -17,19 +17,19 @@ public class Coupon {
     private Long id;
 
     @Column(nullable = false)
-    private Long quantity;
+    private int quantity;
 
     @Column(nullable = false, length = 255)
     private String name;
 
     @Column(nullable = false)
-    private Long discountRate;
+    private int discountRate;
 
     @Column(nullable = false)
     private LocalDate expirationDate;
 
     @Builder
-    public Coupon(Long quantity, String name, Long discountRate, LocalDate expirationDate) {
+    public Coupon(int quantity, String name, int discountRate, LocalDate expirationDate) {
         this.quantity = quantity;
         this.name = name;
         this.discountRate = discountRate;
